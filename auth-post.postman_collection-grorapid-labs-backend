@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "161e5011-0976-472b-948e-5510000c0dd6",
+		"name": "auth-post",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25803584"
+	},
+	"item": [
+		{
+			"name": "user-sign-in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"abc@gmail.com\",\r\n    \"password\":\"abc123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-sign-up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDYwYTNhZDU4NDMwYjNjNWNhMTVlNDgiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRyVTVPOEZjSTM5cVJIMjducFprblVla0o0dW9BelFCaVozazB5YlZuZmp2aFFnU2NaRHpjcSIsIl9fdiI6MCwiaWF0IjoxNjg0MDU3MzI0fQ.MEiHcIAn0IQNtaHasvEDgYlINSEyjaFfaeIL5HkgYOI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDYwYTNhZDU4NDMwYjNjNWNhMTVlNDgiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRyVTVPOEZjSTM5cVJIMjducFprblVla0o0dW9BelFCaVozazB5YlZuZmp2aFFnU2NaRHpjcSIsIl9fdiI6MCwiaWF0IjoxNjg0MDU1Mzg1fQ.OzWs6C4hTdkR61MTMxpafkfblRNiQMsOZ8I3cIySOQo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "\"first-post\"",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "\"first post from postman\"",
+							"type": "text"
+						},
+						{
+							"key": "postImage",
+							"type": "file",
+							"src": "/C:/Users/sardi/Downloads/beautiful-rain.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-post-by-id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDYwYTNhZDU4NDMwYjNjNWNhMTVlNDgiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRyVTVPOEZjSTM5cVJIMjducFprblVla0o0dW9BelFCaVozazB5YlZuZmp2aFFnU2NaRHpjcSIsIl9fdiI6MCwiaWF0IjoxNjg0MDU3MzI0fQ.MEiHcIAn0IQNtaHasvEDgYlINSEyjaFfaeIL5HkgYOI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/post/6460a70e58430b3c5ca15e52",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"post",
+						"6460a70e58430b3c5ca15e52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-single-post-by-id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDYwYTNhZDU4NDMwYjNjNWNhMTVlNDgiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRyVTVPOEZjSTM5cVJIMjducFprblVla0o0dW9BelFCaVozazB5YlZuZmp2aFFnU2NaRHpjcSIsIl9fdiI6MCwiaWF0IjoxNjg0MDU3MzI0fQ.MEiHcIAn0IQNtaHasvEDgYlINSEyjaFfaeIL5HkgYOI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/post/6460b006d25fab60a470d625",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"post",
+						"6460b006d25fab60a470d625"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-post-by-id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
